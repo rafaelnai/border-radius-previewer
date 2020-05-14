@@ -1,12 +1,10 @@
 import React from "react";
-import Slider from "./components/slider";
+import BorderEditor from "./components/border-editor";
 
 function App() {
   return (
     <div className="App">
-      <div>
-        <Slider />
-      </div>
+      <BorderEditor />
     </div>
   );
 }

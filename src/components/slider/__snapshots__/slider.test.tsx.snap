@@ -1,23 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Slider component to match snapshot 1`] = `
-<input
-  className="slider-0-2-1 slider-d0-0-2-2"
-  max="100"
-  min="1"
-  name="simple-slider"
-  title="Simple slider"
-  type="range"
+<Range
+  allowOverlap={false}
+  direction="to left"
+  disabled={false}
+  max={999}
+  min={0}
+  onChange={[Function]}
+  renderThumb={[Function]}
+  renderTrack={[Function]}
+  rtl={false}
+  step={1}
+  values={
+    Array [
+      0,
+    ]
+  }
 />
 `;
 
 exports[`Slider component to match snapshot 2`] = `
-<input
-  className="slider-0-2-1 slider-d1-0-2-3"
-  max="100"
-  min="1"
-  name="simple-slider"
-  title="Simple slider"
-  type="range"
+<Range
+  allowOverlap={false}
+  direction="to top"
+  disabled={false}
+  max={999}
+  min={0}
+  onChange={[Function]}
+  renderThumb={[Function]}
+  renderTrack={[Function]}
+  rtl={false}
+  step={1}
+  values={
+    Array [
+      0,
+    ]
+  }
 />
 `;

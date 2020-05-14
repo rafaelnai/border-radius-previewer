@@ -1,39 +1,49 @@
 import React from "react";
-import useStyles from "./styles";
+import { Range, Direction } from "react-range";
 
 interface Props {
-  name?: string;
-  title?: string;
+  values: number[];
+  min: number;
+  max: number;
+  handleChange: (values: number[]) => void;
   vertical?: boolean;
-  value?: number;
-  min?: number;
-  max?: number;
 }
 
 function Slider(props: Props) {
-  const { name, title, vertical, value, min, max } = props;
-  const classes = useStyles({ vertical });
+  const { values, min, max, handleChange, vertical } = props;
+
+  const trackStyles = (style: any) => ({
+    ...style,
+    height: vertical ? "100%" : 10,
+    width: vertical ? 10 : "100%",
+    backgroundColor: "#a5b1c2",
+  });
+
+  const thumbStyles = (style: any) => ({
+    ...style,
+    height: 15,
+    width: 15,
+    backgroundColor: "#4b6584",
+  });
 
   return (
-    <input
-      className={classes.slider}
-      name={name}
-      title={title}
-      value={value}
-      type="range"
+    <Range
+      step={1}
       min={min}
       max={max}
+      values={values}
+      onChange={handleChange}
+      direction={vertical ? Direction.Up : Direction.Left}
+      renderTrack={({ props, children }) => (
+        <div {...props} style={trackStyles(props.style)}>
+          {children}
+        </div>
+      )}
+      renderThumb={({ props }) => (
+        <div {...props} style={thumbStyles(props.style)} />
+      )}
     />
   );
 }
-
-Slider.defaultProps = {
-  name: "simple-slider",
-  title: "Simple slider",
-  vertical: false,
-  value: 0,
-  min: 0,
-  max: 10,
-};
 
 export default Slider;

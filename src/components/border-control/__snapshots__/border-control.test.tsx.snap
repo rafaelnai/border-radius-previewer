@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider component to match snapshot 1`] = `
+<div
+  className="control-0-2-1"
+>
+  <h1>
+    Hello World
+  </h1>
+</div>
+`;
