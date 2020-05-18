@@ -2,7 +2,7 @@ import React from "react";
 import { Range, Direction } from "react-range";
 
 interface Props {
-  values: number[];
+  values: number;
   min: number;
   max: number;
   handleChange: (values: number[]) => void;
@@ -14,16 +14,15 @@ function Slider(props: Props) {
 
   const trackStyles = (style: any) => ({
     ...style,
-    height: vertical ? "100%" : 10,
-    width: vertical ? 10 : "100%",
-    backgroundColor: "#a5b1c2",
+    height: vertical ? "100%" : 0,
+    width: vertical ? 0 : "100%",
   });
 
   const thumbStyles = (style: any) => ({
     ...style,
     height: 15,
     width: 15,
-    backgroundColor: "#4b6584",
+    backgroundColor: "#fff",
   });
 
   return (
@@ -31,7 +30,7 @@ function Slider(props: Props) {
       step={1}
       min={min}
       max={max}
-      values={values}
+      values={[values]}
       onChange={handleChange}
       direction={vertical ? Direction.Up : Direction.Left}
       renderTrack={({ props, children }) => (
