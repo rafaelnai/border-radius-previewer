@@ -6,10 +6,16 @@ export default createUseStyles({
     height: "90vw",
     maxWidth: 500,
     maxHeight: 500,
-    position: "absolute",
-    left: "50%",
-    top: "25%",
-    transform: "translate(-50%)",
+    transform: "translate(0)",
+  },
+  elliptical: {
+    display: "flex",
+    alignItems: "center",
+    "& > span": {
+      marginLeft: 8,
+      marginRight: 8,
+      fontWeight: 500,
+    },
   },
   verticalSlider: {
     position: "absolute",

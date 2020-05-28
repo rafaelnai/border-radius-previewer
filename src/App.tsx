@@ -2,12 +2,14 @@ import React from "react";
 import BorderEditor from "./containers/border-editor";
 import preset from "jss-preset-default";
 import { jss } from "react-jss";
+import useStyles from "./styles";
 
 jss.setup(preset());
 
 const styles = {
   "@global": {
     body: {
+      fontFamily: "Roboto, sans-serif",
       margin: 0,
       padding: 0,
     },
@@ -17,13 +19,11 @@ const styles = {
 jss.createStyleSheet(styles).attach();
 
 function App() {
+  const classes = useStyles();
   return (
-    <div
-      className="App"
-      style={{ backgroundColor: "#4b6584", height: "100vh", width: "100vw" }}
-    >
+    <main className={classes.app}>
       <BorderEditor />
-    </div>
+    </main>
   );
 }
 

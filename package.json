@@ -2,19 +2,23 @@
   "name": "border-radius-previewer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rafaelnai.github.io/border-radius-previewer",
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "jss-preset-default": "^10.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-jss": "^10.1.1",
     "react-range": "^1.6.3",
     "react-scripts": "3.4.1",
+    "react-switch": "^5.0.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "react-scripts build && gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
