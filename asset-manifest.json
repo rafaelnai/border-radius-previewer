@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.js": "/border-radius-previewer/static/js/main.2368a421.chunk.js",
-    "main.js.map": "/border-radius-previewer/static/js/main.2368a421.chunk.js.map",
+    "main.js": "/border-radius-previewer/static/js/main.12f11e35.chunk.js",
+    "main.js.map": "/border-radius-previewer/static/js/main.12f11e35.chunk.js.map",
     "runtime-main.js": "/border-radius-previewer/static/js/runtime-main.4fd7846d.js",
     "runtime-main.js.map": "/border-radius-previewer/static/js/runtime-main.4fd7846d.js.map",
-    "static/js/2.9a12dec5.chunk.js": "/border-radius-previewer/static/js/2.9a12dec5.chunk.js",
-    "static/js/2.9a12dec5.chunk.js.map": "/border-radius-previewer/static/js/2.9a12dec5.chunk.js.map",
+    "static/js/2.9007b3b9.chunk.js": "/border-radius-previewer/static/js/2.9007b3b9.chunk.js",
+    "static/js/2.9007b3b9.chunk.js.map": "/border-radius-previewer/static/js/2.9007b3b9.chunk.js.map",
     "index.html": "/border-radius-previewer/index.html",
-    "precache-manifest.b32cb21597fe0f848da09b207e4f09aa.js": "/border-radius-previewer/precache-manifest.b32cb21597fe0f848da09b207e4f09aa.js",
+    "precache-manifest.724de64bccdd04c6dcc8559077fbba93.js": "/border-radius-previewer/precache-manifest.724de64bccdd04c6dcc8559077fbba93.js",
     "service-worker.js": "/border-radius-previewer/service-worker.js",
-    "static/js/2.9a12dec5.chunk.js.LICENSE.txt": "/border-radius-previewer/static/js/2.9a12dec5.chunk.js.LICENSE.txt"
+    "static/js/2.9007b3b9.chunk.js.LICENSE.txt": "/border-radius-previewer/static/js/2.9007b3b9.chunk.js.LICENSE.txt",
+    "static/media/copy.f9c8ab05.svg": "/border-radius-previewer/static/media/copy.f9c8ab05.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4fd7846d.js",
-    "static/js/2.9a12dec5.chunk.js",
-    "static/js/main.2368a421.chunk.js"
+    "static/js/2.9007b3b9.chunk.js",
+    "static/js/main.12f11e35.chunk.js"
   ]
 }
