@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2bf3347405a19b2aec4ddb08dc60812a",
+    "revision": "e3b28c0729b48daf762952f83ddde9b5",
     "url": "/border-radius-previewer/index.html"
   },
   {
-    "revision": "21cb55532136adaf0e70",
-    "url": "/border-radius-previewer/static/js/2.9007b3b9.chunk.js"
+    "revision": "05b89788a73ec58cbd5b",
+    "url": "/border-radius-previewer/static/js/2.c29729b5.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/border-radius-previewer/static/js/2.9007b3b9.chunk.js.LICENSE.txt"
+    "url": "/border-radius-previewer/static/js/2.c29729b5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "68d7ced73ec081dc3c94",
-    "url": "/border-radius-previewer/static/js/main.12f11e35.chunk.js"
+    "revision": "58ff96458c1d50e785b9",
+    "url": "/border-radius-previewer/static/js/main.029d577a.chunk.js"
   },
   {
     "revision": "df6c99aaca815dcd1e6c",
