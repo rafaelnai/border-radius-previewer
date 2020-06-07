@@ -1,12 +1,14 @@
-import React, { useState, createRef, useCallback } from "react";
+import React, { useState, createRef, useCallback, useEffect } from "react";
 import Slider from "../../components/slider";
 import useStyles from "./styles";
 import Shape from "../../components/shape";
 import Switch from "react-switch";
 import Output from "../../components/output";
+import CopiedMessage from "../../components/copied-message/";
 
 export default function BorderEditor() {
   const classes = useStyles();
+  const [copiedScreen, setCopiedScreen] = useState(false);
   const [controls, setControls] = useState({
     top: 0,
     left: 100,
@@ -45,14 +47,21 @@ export default function BorderEditor() {
   const currentRadius = getBorderRadius(elliptical);
 
   const handleCopy = useCallback((el: HTMLInputElement | null) => {
-    console.log(el);
     el?.select();
     el?.setSelectionRange(0, 99999);
     document.execCommand("copy");
+
+    setCopiedScreen(true);
   }, []);
 
+  useEffect(() => {
+    if (copiedScreen) setTimeout(() => setCopiedScreen(false), 700);
+  }, [copiedScreen]);
+
+  if (copiedScreen) return <CopiedMessage />;
+
   return (
-    <div>
+    <section className={classes.wrapper}>
       <h1 style={{ textAlign: "center" }}>Border Radius Previewer</h1>
       <label className={classes.elliptical}>
         <span>Simple</span>
@@ -87,6 +96,6 @@ export default function BorderEditor() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

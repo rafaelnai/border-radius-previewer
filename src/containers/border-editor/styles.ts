@@ -1,12 +1,21 @@
 import { createUseStyles } from "react-jss";
 
 export default createUseStyles({
+  "@keyframes fadeIn": {
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  },
   control: {
-    width: "90vw",
-    height: "90vw",
+    width: "94vw",
+    height: "94vw",
     maxWidth: 500,
     maxHeight: 500,
     transform: "translate(0)",
+    margin: "0 auto",
+  },
+  wrapper: {
+    animationName: "$fadeIn",
+    animationDuration: ".5s",
   },
   elliptical: {
     display: "flex",
