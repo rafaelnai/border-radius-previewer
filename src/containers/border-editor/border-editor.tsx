@@ -1,10 +1,9 @@
 import React, { useState, createRef, useCallback, useEffect } from "react";
-import Slider from "../../components/slider";
 import useStyles from "./styles";
-import Shape from "../../components/shape";
 import Switch from "react-switch";
 import Output from "../../components/output";
 import CopiedMessage from "../../components/copied-message/";
+import BorderControl from "../../components/border-control";
 
 export default function BorderEditor() {
   const classes = useStyles();
@@ -23,10 +22,6 @@ export default function BorderEditor() {
       ...controls,
       [item]: values,
     });
-  };
-
-  const isVertical = (item: string) => {
-    return item === "left" || item === "right";
   };
 
   const getBorderRadius = (elliptical: boolean) => {
@@ -82,20 +77,11 @@ export default function BorderEditor() {
         value={currentRadius}
       />
 
-      <div className={classes.control}>
-        <Shape radius={currentRadius} />
-        {Object.keys(controls).map((item) => (
-          <div className={classes[item as keyof typeof controls]} key={item}>
-            <Slider
-              handleChange={handleChange(item)}
-              min={0}
-              max={100}
-              values={controls[item as keyof typeof controls]}
-              vertical={isVertical(item)}
-            />
-          </div>
-        ))}
-      </div>
+      <BorderControl
+        controls={controls}
+        currentRadius={currentRadius}
+        handleChange={handleChange}
+      />
     </section>
   );
 }

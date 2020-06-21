@@ -6,10 +6,10 @@ export default createUseStyles({
     to: { opacity: 1 },
   },
   control: {
-    width: "94vw",
-    height: "94vw",
-    maxWidth: 500,
-    maxHeight: 500,
+    width: 500,
+    height: 500,
+    maxWidth: "90vw",
+    maxHeight: "90vw",
     transform: "translate(0)",
     margin: "0 auto",
   },
@@ -25,33 +25,5 @@ export default createUseStyles({
       marginRight: 8,
       fontWeight: 500,
     },
-  },
-  verticalSlider: {
-    position: "absolute",
-    height: "100%",
-  },
-  horizontalSlider: {
-    position: "absolute",
-    width: "100%",
-  },
-  top: {
-    extend: "horizontalSlider",
-    right: 0,
-    top: 0,
-  },
-  left: {
-    extend: "verticalSlider",
-    left: 0,
-    top: 0,
-  },
-  bottom: {
-    extend: "horizontalSlider",
-    left: 0,
-    bottom: 0,
-  },
-  right: {
-    extend: "verticalSlider",
-    right: 0,
-    bottom: 0,
   },
 });

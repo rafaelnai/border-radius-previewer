@@ -5,7 +5,7 @@ export interface Props {
   radius: string;
 }
 
-export default function BorderControl(props: Props) {
+export default function Shape(props: Props) {
   const classes = useStyles(props);
 
   return <div className={classes.shape} />;
