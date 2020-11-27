@@ -1,12 +1,14 @@
-import React from "react";
-import useStyles from "./styles";
+import React from 'react';
+import useStyles from './styles';
 
-export interface Props {
+export type TProps = {
   radius: string;
-}
+};
 
-export default function Shape(props: Props) {
-  const classes = useStyles(props);
+const Shape: React.FC<TProps> = ({ radius }: TProps) => {
+  const classes = useStyles({ radius });
 
   return <div className={classes.shape} />;
-}
+};
+
+export default Shape;

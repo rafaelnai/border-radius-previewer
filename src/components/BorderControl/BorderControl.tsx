@@ -1,56 +1,47 @@
-import React from "react";
-import Slider from "components/Slider";
-import useStyles from "./styles";
-import Shape from "components/Shape";
+import React, { useMemo } from 'react';
+import Slider from 'components/Slider';
+import useStyles from './styles';
+import Shape from 'components/Shape';
 
-interface Props {
-  currentRadius: string;
-  controls: {
-    top: number;
-    left: number;
-    bottom: number;
-    right: number;
-  };
-  handleChange: (item: string) => (values: number[]) => void;
+export interface IControl {
+  top: number;
+  left: number;
+  bottom: number;
+  right: number;
 }
 
-const BorderControl: React.SFC<Props> = (props) => {
-  const classes = useStyles();
-  const { controls, currentRadius, handleChange } = props;
+type TProps = {
+  currentRadius: string;
+  controls: IControl;
+  handleChange: (item: keyof IControl) => (values: number[]) => void;
+};
 
-  const isVertical = (item: string) => {
-    return item === "left" || item === "right";
-  };
+const BorderControl: React.FC<TProps> = ({ controls, currentRadius, handleChange }) => {
+  const classes = useStyles();
+
+  const isVertical = (item: keyof IControl) => item === 'left' || item === 'right';
+  const controlKeys = Object.keys(controls) as Array<keyof typeof controls>;
 
   return (
     <div className={classes.control}>
       <Shape radius={currentRadius} />
-      {Object.keys(controls).map((item) => (
-        <div className={classes[item as keyof typeof controls]} key={item}>
-          <Slider
-            handleChange={handleChange(item)}
-            min={0}
-            max={100}
-            values={controls[item as keyof typeof controls]}
-            vertical={isVertical(item)}
-          />
-        </div>
-      ))}
+      {useMemo(
+        () =>
+          controlKeys.map((key) => (
+            <div className={classes[key]} key={key}>
+              <Slider
+                handleChange={handleChange(key)}
+                min={0}
+                max={100}
+                values={controls[key]}
+                vertical={isVertical(key)}
+              />
+            </div>
+          )),
+        [controlKeys, isVertical, handleChange]
+      )}
     </div>
   );
-};
-
-BorderControl.defaultProps = {
-  currentRadius: "",
-  controls: {
-    top: 0,
-    left: 100,
-    bottom: 100,
-    right: 0,
-  },
-  handleChange: (item: string) => (values: number[]) => {
-    console.log(item, values);
-  },
 };
 
 export default React.memo(BorderControl);
