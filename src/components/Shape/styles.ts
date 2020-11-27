@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import { Props } from "./shape";
+import { Props } from "./Shape";
 
 export default createUseStyles({
   shape: ({ radius }: Props) => ({

@@ -1,5 +1,5 @@
 import React from "react";
-import BorderEditor from "./containers/border-editor";
+import BorderEditor from "containers/BorderEditor";
 import preset from "jss-preset-default";
 import { jss } from "react-jss";
 import useStyles from "./styles";

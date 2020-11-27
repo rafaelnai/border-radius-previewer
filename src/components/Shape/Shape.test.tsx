@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
-import Shape from "./shape";
+import Shape from "./Shape";
 import "../../../config";
 
 describe("Slider component", () => {

@@ -1,9 +1,9 @@
 import React, { useState, createRef, useCallback, useEffect } from "react";
 import useStyles from "./styles";
 import Switch from "react-switch";
-import Output from "../../components/output";
-import CopiedMessage from "../../components/copied-message/";
-import BorderControl from "../../components/border-control";
+import Output from "components/Output";
+import CopiedMessage from "components/CopiedMessage";
+import BorderControl from "components/BorderControl";
 
 export default function BorderEditor() {
   const classes = useStyles();
