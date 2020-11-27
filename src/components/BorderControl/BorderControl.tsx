@@ -1,7 +1,7 @@
 import React from "react";
-import Slider from "../../components/slider";
+import Slider from "components/Slider";
 import useStyles from "./styles";
-import Shape from "../../components/shape";
+import Shape from "components/Shape";
 
 interface Props {
   currentRadius: string;
