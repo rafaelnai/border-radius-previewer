@@ -1,7 +1,7 @@
-import React from "react";
-import useStyles from "./styles";
+import React from 'react';
+import useStyles from './styles';
 
-const CopiedMessage: React.SFC = () => {
+const CopiedMessage: React.FC = () => {
   const classes = useStyles();
 
   return (
